@@ -1,1 +1,1 @@
-Simple React Based NewsApp :)      using https://newsapi.org/
+Simple React Based NewsApp :)      "using : " https://newsapi.org/
