@@ -6,29 +6,62 @@ export default class Navbar extends PureComponent {
 
   render() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="/">NewsApp</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    {/* <li className="nav-link" href="/">about</li>
-                    <li className="nav-link" href="/">business</li>
-                    <li className="nav-link" href="/">entertainment</li>
-                    <li className="nav-link" href="/">general</li>
-                    <li className="nav-link" href="/">health</li>
-                    <li className="nav-link" href="/">technology</li>
-                    <li className="nav-link" href="/">science</li>
-                    <li className="nav-link" href="/">sports</li> */}
-                </ul>
+        <>
+            <div className="top-header">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-3 col-md-4">
+                            <div className="logo">
+                                <a href="/">
+                                    <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-md-4">
+                            <div className="search">
+                                <input type="text" placeholder="Search"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </div>
-        </nav>
+
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+                <div className="container-fluid">
+                    <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">About</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Business</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Entertainment</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">General</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Health</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Technology</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Science</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Sports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
     )
   }
 }
