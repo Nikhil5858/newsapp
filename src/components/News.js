@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 export default class News extends Component {
 
   static desfaultProps = {
-      country:'in',
-      pageSize:6,
-      category:'general'
+    country:'in',
+    pageSize:6,
+    category:'general',
   }
 
   static propsType = {
@@ -32,7 +32,7 @@ export default class News extends Component {
   }
 
   async updateNews(){
-    const url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9b51a52573984662bd24def37e605e55&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url =`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({loading:true});
     let data = await fetch(url);
     let parsedData = await data.json();
